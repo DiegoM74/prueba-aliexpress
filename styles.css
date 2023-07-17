@@ -1,59 +1,57 @@
-/*centrado-texto*/
-.container {
-	text-align: center;
-	margin-top: 10px;
-	line-height: 1.2;
+body {
+    font-family: Arial;
+    text-align: center;
 }
 
+h1 {
+    font-size: 2.3em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.result-text {
+    font-size: 1em;
+}
+
+/*margen*/
+.margen {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}  
+  
 /*cuadrado*/
 input[type="text"] {
-	font-size: 18px;
-	padding: 5px;
-	width: 200px;
-	margin: 10px;
+    width: 230px;
+    height: 30px;
+    font-size: 1em;
 }
-
+  
 /*boton*/
 button {
-	padding: 10px 20px;
-	font-size: 16px;
-	background-color: #FF0000;
-	color: #FFFFFF;
-	border: none;
-	cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/*margen-info*/
-#informacion {
-	margin-top: 18px;
-}
-
-/*info*/
-#informacion p {
-	font-size: 18px;
-	line-height: 1.2;
-}
-
-/*cel*/
-@media (max-width: 768px) {
-	body {
-	font-size: 18px;
-}
-  
-.container {
-	width: 90%;
-	margin: 0 auto;}
-}
-
-/*comp*/
-@media (min-width: 769px) {
-	body {
-	font-size: 18px;
-}
-  
-.container {
-	width: 70%;
-	margin: 0 auto;
-}
-
+button:hover {
+    background-color: #f10000;
 }
