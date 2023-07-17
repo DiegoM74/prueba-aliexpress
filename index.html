@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-	<title>Reconocedor de códigos de AliExpress</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocedor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Reconocedor de códigos de AliExpress</h1>
-	  <p>Pega tu código de seguimiento de AliExpress, después dale al botón y podrás ver información sobre tu envío.</p>
-	  <p>Puedes darle click a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí</p>
-	  <input type="text" id="codigoInput" placeholder="Ingresa el código">
-	  <button onclick="obtenerInformacion()">Obtener información</button>
-	  <div id="informacion"></div>
-	  <script src="script.js"></script>
-	  <h3>Páginas recomendadas para hacer seguimiento y obtener códigos alternativos.</h3>
-	  	<p><a href="https://postal.ninja/es">Postal Ninja</a></p>
-	  	<p><a href="https://global.cainiao.com/">Global Cainiao</a></p>
-	  <h3>Envíos compatibles</h3>
-	  	<p>- Los más conocidos y usados, como Aliexpress Standard Shipping.</p> <p>- Los que son por el servicio postal un país, como son China Post o SingPost (por ahora los únicos 2 países compatibles).</p>
-	  <h3> Envíos no compatibles</h3>
-	  	<p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido. DHL eCommerce pronto será compatible</p> <p>- El envío Seller's Shipping Method, porque el vendedor decide por donde enviar.</p>
-	  <h3>Errores conocidos</h3>
-	  	<p>- Los envios de SunYou no siempre son detectados correctamente.</p> <p>- En celulares, al poner el modo escritorio, el texto se agranda demasiado.</p>
-	  <h3>Contacto</h3>
-	  <p>Para reportar errores o solicitar la adición de un nuevo envío, escribe a la siguiente dirrección de correo</p>
-	  <a href="mailto:maldonadobeltrandiego@gmail.com">Correo</a>
-</div>
+    <div class="margen">
+
+        <h1>Reconocedor de códigos de AliExpress</h1>
+            <p>Pega tu código de seguimiento de AliExpress, después dale al botón y podrás ver información sobre tu envío.</p>
+            <p>Puedes darle click a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí</p>
+            <p>IMPORTANTE: Esto no sirve para hacer seguimiento, es para saber que empresa reparte y demás información. Para hacer seguimiento usa las páginas recomendadas.</p>
+        <br>
+
+        <input type="text" id="code" placeholder="Ingresa el código">
+            <br><br>
+
+        <button type="submit" onclick="checkCode()">Obtener información</button>
+            <p id="result" class="result-text"></p>
+
+        <h2>Páginas recomendadas para hacer seguimiento</h2>
+            <p><a href="https://postal.ninja">Postal Ninja</a></p>
+            <p><a href="https://global.cainiao.com">Global Cainiao</a></p>
+
+        <h2>Envíos compatibles</h2>
+            <p>- Los más conocidos y usados, como Aliexpress Standard Shipping.</p> 
+            <p>- Los de China Post y SingPost (que empiezan con 2 letras y terminan con CN o SG, respectivamente).</p>
+
+        <h2> Envíos no compatibles</h2>
+            <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido. DHL eCommerce pronto será compatible.</p>
+            <p>- El envío Seller's Shipping Method no tiene 100% de compatibilidad, porque el vendedor decide por donde enviar, y puede elegir cualquier empresa.</p>
+
+        <h2>Errores conocidos</h2>
+            <p>- Los envios de SunYou no siempre son detectados correctamente.</p>
+            
+        <h2>Contacto</h2>
+            <p>Para reportar errores o solicitar la adición de un nuevo envío, escribe a la siguiente dirrección de correo</p>
+            <p><a href="mailto:maldonadobeltrandiego@gmail.com">Correo</a></p>
+    </div>
+<script src="script.js"></script>
 </body>
-</html>
+	</html>
+								  
