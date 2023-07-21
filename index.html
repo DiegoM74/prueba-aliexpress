@@ -3,44 +3,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconocedor</title>
+    <title>Reconocedor de códigos</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="margen">
 
         <h1>Reconocedor de códigos de AliExpress</h1>
-            <p>Pega tu código de seguimiento de AliExpress, después dale al botón y podrás ver información sobre tu envío.</p>
-            <p>Puedes darle click a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí</p>
-            <p>IMPORTANTE: Esto no sirve para hacer seguimiento, es para saber que empresa reparte y demás información. Para hacer seguimiento usa las páginas recomendadas.</p>
+            <p>Pega tu código de seguimiento, después dale al botón y podrás ver información sobre tu envío.</p>
+            <p>Puedes darle clic a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí.</p>
         <br>
 
         <input type="text" id="code" placeholder="Ingresa el código">
             <br><br>
-
         <button type="submit" onclick="checkCode()">Obtener información</button>
             <p id="result" class="result-text"></p>
+        <br>
 
-        <h2>Páginas recomendadas para hacer seguimiento</h2>
+        <h2>Importante</h2>
+            <p>Esto no sirve para hacer seguimiento, es para saber que empresa reparte y otras cosas. Para hacer seguimiento usa las páginas recomendadas.</p>
+            <p>Recomiendo poner el código de seguimiento en una de las páginas recomendadas y buscar un código alternativo. Si sale uno, usar ese en esta página.</p>
+
+        <h2>Páginas recomendadas</h2>
+            <p>Te recomiendo usar estas 2 páginas para hacer seguimiento y obtener códigos de seguimientos alternativos.</p>
             <p><a href="https://postal.ninja">Postal Ninja</a></p>
             <p><a href="https://global.cainiao.com">Global Cainiao</a></p>
 
         <h2>Envíos compatibles</h2>
-            <p>- Los más conocidos y usados, como Aliexpress Standard Shipping.</p> 
-            <p>- Los de China Post y SingPost (que empiezan con 2 letras y terminan con CN o SG, respectivamente).</p>
+            <p>- Los más conocidos y usados, como el AliExpress Standard Shipping o AliExpress Saver Shipping.</p> 
+            <p>- Los de China Post y Singapore Post (que empiezan con 2 letras y terminan con CN o SG, respectivamente).</p>
 
-        <h2> Envíos no compatibles</h2>
-            <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido. DHL eCommerce pronto será compatible.</p>
+        <h2>Envíos no compatibles</h2>
+            <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido.</p>
             <p>- El envío Seller's Shipping Method no tiene 100% de compatibilidad, porque el vendedor decide por donde enviar, y puede elegir cualquier empresa.</p>
 
-        <h2>Errores conocidos</h2>
-            <p>- Los envios de SunYou no siempre son detectados correctamente.</p>
+        <h2>Grupos recomendados</h2>
+            <p>En los siguientes grupos de Facebook puedes obtener ayuda mía y de otras personas. También, en las guías y destacados hay información que te puede servir.</p>
+            <p><a href="https://www.facebook.com/groups/662322751014254">Aliexpress, Aduana y Correos de Chile</a></p>
+            <p><a href="https://www.facebook.com/groups/aliexpress.dudas.chile">Aliexpress (Chile) - Dudas solo Aliexpress</a></p>
             
         <h2>Contacto</h2>
-            <p>Para reportar errores o solicitar la adición de un nuevo envío, escribe a la siguiente dirrección de correo</p>
+            <p>Para reportar errores o solicitar la adición de un nuevo envío, escribe a la siguiente dirección de correo.</p>
             <p><a href="mailto:maldonadobeltrandiego@gmail.com">Correo</a></p>
+
+        <h2>Donaciones</h2>
+            <p>Si quieres ayudar con el desarrollo de la pagina, considera donar. Esto me animará a ampliar la compatibilidad de los envíos.</p>
+            <p><a href="https://link.mercadopago.cl/diegomaldonado74">Donar</a></p>
     </div>
 <script src="script.js"></script>
 </body>
-	</html>
-								  
+</html>
