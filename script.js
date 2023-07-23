@@ -52,7 +52,7 @@ function checkCode() {
 
     // 8800
         } else if (code.length === 12 && code.startsWith("8800")) {
-        result.innerHTML = "<p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento en Chile: Sí (algunas veces por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 semanas (para entregas internacionales)<p/>";
+        result.innerHTML = "<p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento en Chile: Sí (algunas veces solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 semanas (para entregas internacionales)<p/>";
 
 //wshcl
     } else if (code.startsWith("WSHCL") && code.endsWith("YQ") && code.length === 17) {
@@ -127,8 +127,36 @@ function checkCode() {
     result.innerHTML = "<p>Transportista en China: <a href='http://www.qyexp.cn:8082/en/trackIndex.htm'>QYEXP</a></p> <p>Transportista en Chile: Desconocido<p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: Desconocido<p/>";
 
 //cne
-    } else if (code.length === 13 && code.startsWith ("3A5V")) {
+    } else if (code.length === 13 && code.startsWith("3A5V")) {
     result.innerHTML = "<p>Transportista en China: <a href='https://postal.ninja/en/p/cne-express/tracking'>CNE Express</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 3 a 5 semanas<p/>";
+
+//ty
+    } else if (code.length === 17 && code.startsWith("TYZRB") && code.endsWith("YQ")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://www.aftership.com/es/carriers/topyou'>TopYou</a></p> <p>Transportista en Chile: <a href='https://www.fedex.com/es-cl/tracking.html'>FedEx</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 3 a 5 semanas<p/>"
+
+//mlcl
+    } else if (code.length === 14 && code.startsWith("MLCL") && code.endsWith("N")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://mailamericas.com/tracking'>Mail Americas</a></p> <p>Transportista en Chile: <a href='https://www.fedex.com/es-cl/tracking.html'>FedEx</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 3 a 5 semanas<p/>"
+
+//001
+    } else if (code.length === 27 && code.startsWith("001")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://mailamericas.com/tracking'>Mail Americas</a></p> <p>Transportista en Chile: <a href='https://www.fedex.com/es-cl/tracking.html'>FedEx</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 3 a 5 semanas<p/>"
+
+//cce
+    } else if (code.length === 15 && code.startsWith("SJHSD") && code.endsWith("YQ")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://www.17track.net/en/carriers/cce'>CCE Express</a></p> <p>Transportista en Chile: Desconocido<p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 1 a 3 meses<p/>"
+
+//lc
+    } else if (code.length === 14 && code.startsWith("LCWL") && code.endsWith("YQ")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://www.17track.net/en/carriers/liuchen'>Liuchen</a></p> <p>Transportista en Chile: Desconocido<p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 1 a 3 meses<p/>"
+
+//far
+    } else if (code.length === 17 && code.startsWith("FAREX") && code.endsWith("YQ")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://www.17track.net/en/carriers/far-international'>Far Internacional</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 2 a 5 semanas<p/>"
+
+//dhl e
+    } else if (code.length === 22 && code.startsWith("HKYES")) {
+    result.innerHTML = "<p>Transportista en China: <a href='https://ecommerceportal.dhl.com/track'>DHL eCommerce</a></p> <p>Transportista en Chile: Desconocido<p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: Desconocido<p/>"
 
 //correos postales
     //cn
@@ -188,7 +216,7 @@ function checkCode() {
 
         //ec
             } else if (code.endsWith("NL") && code.startsWith("U") && code.length === 13) {
-            result.innerHTML = "<p>Método de envío: Netherlands Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://postnl.post/tracktrace'>Netherlands Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí (solo por sucursal virtual)<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+            result.innerHTML = "<p>Método de envío: Netherlands Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://postnl.post/tracktrace'>Netherlands Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
 
         //or
             } else if (code.endsWith("NL") && code.startsWith("A") && code.length === 13) {
@@ -209,14 +237,161 @@ function checkCode() {
 
         //ec
             } else if (code.endsWith("BE") && code.startsWith("U") && code.length === 13) {
-            result.innerHTML = "<p>Método de envío: Belgium Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.bpost.cloud/btr/web/#/home?lang=en'>Belgium Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí (solo por sucursal virtual)<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+            result.innerHTML = "<p>Método de envío: Belgium Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.bpost.cloud/btr/web/#/home?lang=en'>Belgium Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
 
         //or
             } else if (code.endsWith("BE") && code.startsWith("A") && code.length === 13) {
             result.innerHTML = "<p>Método de envío: Belgium Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.bpost.cloud/btr/web/#/home?lang=en'>Belgium Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
 
+    //us
+        //r
+            } else if (code.endsWith("US") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: USPS Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://es-tools.usps.com/go/TrackConfirmAction_input'>USPS</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("US") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: USPS EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://es-tools.usps.com/go/TrackConfirmAction_input'>USPS</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("US") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: USPS ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://es-tools.usps.com/go/TrackConfirmAction_input'>USPS</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("US") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: USPS Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://es-tools.usps.com/go/TrackConfirmAction_input'>USPS</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("US") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: USPS Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://es-tools.usps.com/go/TrackConfirmAction_input'>USPS</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
+    //es
+        //r
+            } else if (code.endsWith("ES") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Correos España Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.correos.es/es/es/herramientas/localizador/envios'>Correos España</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("ES") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Correos España EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.correos.es/es/es/herramientas/localizador/envios'>Correos España</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("ES") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Correos España ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.correos.es/es/es/herramientas/localizador/envios'>Correos España</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("ES") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Correos España Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.correos.es/es/es/herramientas/localizador/envios'>Correos España</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("ES") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Correos España Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.correos.es/es/es/herramientas/localizador/envios'>Correos España</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
+    //hk
+        //r
+            } else if (code.endsWith("HK") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Hongkong Post Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://webapp.hongkongpost.hk/en/mail_tracking/index.html'>Hongkong Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("HK") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Hongkong Post EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://webapp.hongkongpost.hk/en/mail_tracking/index.html'>Hongkong Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("HK") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Hongkong Post ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://webapp.hongkongpost.hk/en/mail_tracking/index.html'>Hongkong Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("HK") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Hongkong Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://webapp.hongkongpost.hk/en/mail_tracking/index.html'>Hongkong Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("HK") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Hongkong Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://webapp.hongkongpost.hk/en/mail_tracking/index.html'>Hongkong Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+    
+    //tr
+        //r
+            } else if (code.endsWith("TR") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Turkish Post Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.ptt.gov.tr/'>Turkish Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("TR") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Turkish Post EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.ptt.gov.tr/'>Turkish Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("TR") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Turkish Post ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.ptt.gov.tr/'>Turkish Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("TR") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Turkish Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.ptt.gov.tr/'>Turkish Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("TR") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Turkish Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.ptt.gov.tr/'>Turkish Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
+    //vu
+        //r
+            } else if (code.endsWith("VU") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Vanuatu Post Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.vanuatupost.vu/track-and-trace'>Vanuatu Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("VU") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Vanuatu Post EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.vanuatupost.vu/track-and-trace'>Vanuatu Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("VU") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Vanuatu Post ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.vanuatupost.vu/track-and-trace'>Vanuatu Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("VU") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Vanuatu Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.vanuatupost.vu/track-and-trace'>Vanuatu Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("VU") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Vanuatu Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.vanuatupost.vu/track-and-trace'>Vanuatu Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
+    //sb
+        //r
+            } else if (code.endsWith("SB") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Serbia Post Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.posta.rs/eng/alati/pracenje-posiljke.aspx'>Serbia Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("SB") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Serbia Post EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.posta.rs/eng/alati/pracenje-posiljke.aspx'>Serbia Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("SB") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Serbia Post ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.posta.rs/eng/alati/pracenje-posiljke.aspx'>Serbia Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("SB") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Serbia Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.posta.rs/eng/alati/pracenje-posiljke.aspx'>Serbia Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("SB") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Serbia Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://www.posta.rs/eng/alati/pracenje-posiljke.aspx'>Serbia Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
+    //jp
+        //r
+            } else if (code.endsWith("JP") && code.startsWith("R") || code.startsWith("C") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Japan Post Registered Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://trackings.post.japanpost.jp/services/srv/search/input?locale=en'>Japan Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //e
+            } else if (code.endsWith("JP") && code.startsWith("E") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Japan Post EMS<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://trackings.post.japanpost.jp/services/srv/search/input?locale=en'>Japan Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 meses<p/>";
+
+        //ep
+            } else if (code.endsWith("JP") && code.startsWith("L") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Japan Post ePacket<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://trackings.post.japanpost.jp/services/srv/search/input?locale=en'>Japan Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Si (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 2 a 5 meses<p/>";
+
+        //ec
+            } else if (code.endsWith("JP") && code.startsWith("U") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Japan Post Economy Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://trackings.post.japanpost.jp/services/srv/search/input?locale=en'>Japan Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí (solo por sucursal virtual)<p/> <p>Tiempo estimado de entrega: 3 a 7 meses<p/>";
+
+        //or
+            } else if (code.endsWith("JP") && code.startsWith("A") && code.length === 13) {
+            result.innerHTML = "<p>Método de envío: Japan Post Ordinary Mail<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://trackings.post.japanpost.jp/services/srv/search/input?locale=en'>Japan Post</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 3 a 9 meses<p/>";
+
     }
 // invalido
     else
-    result.innerHTML = "<p>Código inválido o desconocido</p>";
+    result.innerHTML = "<p>Código inválido o desconocido.</p>";
 }
