@@ -14,8 +14,8 @@ function checkCode() {
     } else if (code.length === 12 && code.startsWith("713")) {
     result.innerHTML = "<p>Método de envío: AliExpress Standard Shipping<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p> <p>Transportista en Chile: <a href='https://centrodeayuda.chilexpress.cl'>Chilexpress</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 semanas<p/>";
 
-//75
-    } else if (code.length === 10 && (code.startsWith("74") || code.startsWith("75") || code.startsWith("76"))) {
+//75/90
+    } else if (code.length === 10 && (code.startsWith("90") || (code.startsWith("74") || code.startsWith("75") || code.startsWith("76"))) {
     result.innerHTML = "<p>Método de envío: AliExpress Standard Shipping<p/> <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p> <p>Transportista en Chile: <a href='https://www.blue.cl'>BluExpress</a><p/> <p>Seguimiento por AliExpress: Sí<p/> <p>Seguimiento en Chile: Sí<p/> <p>Tiempo estimado de entrega: 2 a 4 semanas<p/>";
 
 //99m
